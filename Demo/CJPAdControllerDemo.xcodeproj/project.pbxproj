@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B30F7711B4D2EC500099837 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B30F7701B4D2EC500099837 /* GoogleMobileAds.framework */; };
 		838343541A845E1C00098483 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 838343531A845E1C00098483 /* main.m */; };
 		838343571A845E1C00098483 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 838343561A845E1C00098483 /* AppDelegate.m */; };
 		8383435A1A845E1C00098483 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 838343591A845E1C00098483 /* ViewController.m */; };
@@ -16,7 +17,6 @@
 		8383436E1A845E1C00098483 /* CJPAdControllerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383436D1A845E1C00098483 /* CJPAdControllerDemoTests.m */; };
 		838343791A8460D400098483 /* AnotherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 838343781A8460D400098483 /* AnotherViewController.m */; };
 		8383437D1A84617100098483 /* CJPAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383437C1A84617100098483 /* CJPAdController.m */; };
-		838343811A84618900098483 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8383437F1A84618900098483 /* GoogleMobileAds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B30F7701B4D2EC500099837 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		8383434E1A845E1C00098483 /* CJPAdControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJPAdControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838343521A845E1C00098483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		838343531A845E1C00098483 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		838343781A8460D400098483 /* AnotherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotherViewController.m; sourceTree = "<group>"; };
 		8383437B1A84617100098483 /* CJPAdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJPAdController.h; sourceTree = "<group>"; };
 		8383437C1A84617100098483 /* CJPAdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJPAdController.m; sourceTree = "<group>"; };
-		8383437F1A84618900098483 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				838343811A84618900098483 /* GoogleMobileAds.framework in Frameworks */,
+				5B30F7711B4D2EC500099837 /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +90,7 @@
 		838343501A845E1C00098483 /* CJPAdControllerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5B30F7701B4D2EC500099837 /* GoogleMobileAds.framework */,
 				838343551A845E1C00098483 /* AppDelegate.h */,
 				838343561A845E1C00098483 /* AppDelegate.m */,
 				838343581A845E1C00098483 /* ViewController.h */,
@@ -97,7 +98,6 @@
 				838343771A8460D400098483 /* AnotherViewController.h */,
 				838343781A8460D400098483 /* AnotherViewController.m */,
 				8383437A1A84617100098483 /* CJPAdController */,
-				8383437E1A84618900098483 /* GoogleMobileAdsSdk */,
 				8383435B1A845E1C00098483 /* Main.storyboard */,
 				8383435E1A845E1C00098483 /* Images.xcassets */,
 				838343601A845E1C00098483 /* LaunchScreen.xib */,
@@ -139,14 +139,6 @@
 				8383437C1A84617100098483 /* CJPAdController.m */,
 			);
 			path = CJPAdController;
-			sourceTree = "<group>";
-		};
-		8383437E1A84618900098483 /* GoogleMobileAdsSdk */ = {
-			isa = PBXGroup;
-			children = (
-				8383437F1A84618900098483 /* GoogleMobileAds.framework */,
-			);
-			path = GoogleMobileAdsSdk;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,6 +373,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CJPAdControllerDemo/GoogleMobileAdsSdk",
+					"$(PROJECT_DIR)/CJPAdControllerDemo",
 				);
 				INFOPLIST_FILE = CJPAdControllerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -396,6 +389,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CJPAdControllerDemo/GoogleMobileAdsSdk",
+					"$(PROJECT_DIR)/CJPAdControllerDemo",
 				);
 				INFOPLIST_FILE = CJPAdControllerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -456,6 +450,7 @@
 				838343731A845E1C00098483 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		838343741A845E1C00098483 /* Build configuration list for PBXNativeTarget "CJPAdControllerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +459,7 @@
 				838343761A845E1C00098483 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

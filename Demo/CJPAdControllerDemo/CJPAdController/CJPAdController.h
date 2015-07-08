@@ -15,7 +15,8 @@
 
 typedef NS_ENUM(NSInteger, CJPAdNetwork) {
     CJPAdNetworkiAd = 1,        ///< iAd
-    CJPAdNetworkAdMob           ///< AdMob
+    CJPAdNetworkAdMob = 2,      ///< AdMob
+    CJPAdNetworkDFP = 3         ///< DoubleClick for Publishers
 };
 
 typedef NS_ENUM(NSInteger, CJPAdPosition) {
@@ -105,7 +106,22 @@ typedef NS_ENUM(NSInteger, CJPAdPosition) {
 @property (nonatomic, assign) BOOL useAdMobSmartSize;
 
 /// An array of UDID strings of devices that you want to show AdMob test ads on.
-@property (nonatomic, copy) NSArray *testDeviceIDs;
+@property (nonatomic, copy) NSArray *adMobTestDeviceIDs;
+
+/* DFP SPECIFIC SETTINGS */
+
+/// DFP Unit ID for the banner you want to display.
+// This will be a long string containing your DFP publisher ID following by an identifier for the banner
+// It should look similar to the following: ca-app-pub-1234567890987654/1234567890
+@property (nonatomic, copy) NSString *dfpUnitID;
+
+/// Use AdMob's "Smart Size" banners? By default this is set to YES.
+/// If set to NO, 320x50 ads will be used for iPhone/iPod and 728x90 for iPad.
+// For more info see: https://developers.google.com/mobile-ads-sdk/docs/admob/smart-banners
+@property (nonatomic, assign) BOOL useDFPSmartSize;
+
+/// An array of UDID strings of devices that you want to show AdMob test ads on.
+@property (nonatomic, copy) NSArray *dfpTestDeviceIDs;
 
 /*
  From: https://developers.google.com/mobile-ads-sdk/docs/admob/additional-controls#coppa-setting

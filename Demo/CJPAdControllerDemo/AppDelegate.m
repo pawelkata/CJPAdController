@@ -43,16 +43,21 @@
      
      Obviously you will need to provide an actual ad unit ID for AdMob
      "Smart Size" banners will be used (this is YES by default so it's redundant in this example, but included for the sake of completeness
-     testDeviceIDs should be replaced with the actual UDID's of any devices you are wanting to receive test ads on. The Simulator will automatically be added to this array.
+     adMobTestDeviceIDs should be replaced with the actual UDID's of any devices you are wanting to receive test ads on. The Simulator will automatically be added to this array.
      */
-    [CJPAdController sharedInstance].adNetworks = @[@(CJPAdNetworkiAd), @(CJPAdNetworkAdMob)];
+//    [CJPAdController sharedInstance].adNetworks = @[@(CJPAdNetworkDFP), @(CJPAdNetworkiAd), @(CJPAdNetworkAdMob)];
+    [CJPAdController sharedInstance].adNetworks = @[@(CJPAdNetworkDFP)];
     [CJPAdController sharedInstance].adPosition = CJPAdPositionBottom;
     [CJPAdController sharedInstance].initialDelay = 2.0;
     // AdMob specific
     [CJPAdController sharedInstance].adMobUnitID = @"ca-app-pub-1234567890987654/1234567890";
     [CJPAdController sharedInstance].useAdMobSmartSize = YES;
-    [CJPAdController sharedInstance].testDeviceIDs = @[@"this0is3a2fake8UUID",@"and501sth1s0ne"];
-    
+    // [CJPAdController sharedInstance].adMobTestDeviceIDs = @[kGADSimulatorID];
+    // DFP specific
+    [CJPAdController sharedInstance].dfpUnitID = @"/1234567/banner_name";
+    [CJPAdController sharedInstance].useDFPSmartSize = YES;
+    // [CJPAdController sharedInstance].dfpTestDeviceIDs = @[kGADSimulatorID];
+
     // AdMob targeting (don't set these unless your app already has this information from your users and you want to use it to target ads to them)
     // [CJPAdController sharedInstance].adMobGender = kGADGenderMale;
     // [CJPAdController sharedInstance].adMobBirthday = [NSDate date]; // should be an actual birthdate, not the current date
